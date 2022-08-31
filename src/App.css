@@ -7,7 +7,7 @@
 
 
 .App-header {
-  background-color: beige;
+  background-color: bisque;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,4 +30,16 @@ tr{
   to {
     transform: rotate(360deg);
   }
+}
+label   {
+  color: black;
+  font-size: 15px;
+
+}
+
+table{
+  background-color: beige;
+  width: 50%;
+  height: 50%;
+font-weight: bold;
 }
