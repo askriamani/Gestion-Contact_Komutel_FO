@@ -17,8 +17,9 @@ class ContactAdd extends React.Component {
       adresse: event.target[1].value,
       ville: event.target[2].value,
       pays : event.target[3].value,
-      debutContrat :event.target[4].value,
-      telephone :event.target[5].value
+        telephone :event.target[4].value,
+      debutContrat :event.target[5].value
+
     };
     console.log(contact)
     axios.post(`http://localhost:8080/contact`,  contact )
@@ -44,16 +45,16 @@ class ContactAdd extends React.Component {
               <td> <input  type="email" name="adresse" required/></td>
             </tr>
             <tr>Ville:
-              <td> <input xt type="text" name="ville" pattern='[a-zA-Z]*' required/></td>
+              <td> <input  type="text" name="ville" pattern='[a-zA-Z]*' required/></td>
             </tr>
             <tr>Pays:
               <td> <input  type="text" name="pays" pattern='[a-zA-Z]*' required/></td>
             </tr>
             <tr>Téléphone:
-              <td> <input  type="tel"  name="telephone" required /></td>
+              <td> <input  type="text"  name="telephone" required /></td>
             </tr>
             <tr>Début Contrat:
-              <td> <input  type="date" name="debutContrat"/></td>
+              <td> <input  type="date" name="debutContrat" required/></td>
             </tr>
 
 
