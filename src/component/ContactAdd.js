@@ -9,6 +9,8 @@ class ContactAdd extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+      alert('Form Submitted');
+      event.preventDefault();
 
     let contact = {
       nom: event.target[0].value,
@@ -32,34 +34,34 @@ class ContactAdd extends React.Component {
         <form onSubmit={this.handleSubmit}>
 
           <table>
-         <tr>  <label>
-              Contact
-            </label></tr>
-            <tr>Name:
-           <td> <TextField  type="text" name="nom"/></td>
+        <tr>    <label>
+                  Contact
+              </label></tr>
+              <tr>Name:
+           <td> <input type="text" name="nom"   pattern='[a-zA-Z]*' required/></td>
            </tr>
             <tr>Adresse:
-              <td> <TextField  type="text" name="adresse"/></td>
+              <td> <input  type="email" name="adresse" required/></td>
             </tr>
             <tr>Ville:
-              <td> <TextField  type="text" name="ville"/></td>
+              <td> <input xt type="text" name="ville" pattern='[a-zA-Z]*' required/></td>
             </tr>
             <tr>Pays:
-              <td> <TextField  type="text" name="pays"/></td>
+              <td> <input  type="text" name="pays" pattern='[a-zA-Z]*' required/></td>
             </tr>
             <tr>Téléphone:
-              <td> <TextField  type="text" name="telephone"/></td>
+              <td> <input  type="tel"  name="telephone" required /></td>
             </tr>
             <tr>Début Contrat:
-              <td> <TextField  type="text" name="debutContrat"/></td>
+              <td> <input  type="date" name="debutContrat"/></td>
             </tr>
 
 
           {/*<button type="submit">Add</button>*/}
-            <tr>   <Button variant="contained" color="primary" type={"submit"}>
+       <tr>    <Button variant="contained" color="primary" type={"submit"}>
             confirmer
          </Button>
-        <td>    <Button variant="contained" color="primary" type={"submit"}>
+       <td>   <Button variant="contained" color="primary" type={"reset"}>
             annuler
             </Button></td></tr>
           </table>
